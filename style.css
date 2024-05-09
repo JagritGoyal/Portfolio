@@ -159,7 +159,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 /* Hamburger menu ends */
 
 
-/* .smoother {
+.smoother {
 	opacity: 0;
 	transform: translateY(150px);
 	transition: all 1s;
@@ -168,7 +168,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 .smoother.reveal {
 	opacity: 1;
 	transform: translateY(0);
-} */
+}
 
 /* Home section starts */
 .title {
