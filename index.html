@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<script src="https://kit.fontawesome.com/76671051a0.js" crossorigin="anonymous"></script>
+
+	<title>Portfolio - Jagrit Goyal</title>
+</head>
+
+<body>
+
+	<header>
+		<!-- <nav class="fixed h-16 w-screen shadow-md flex items-center justify-center bg-white bg-opacity-85 backdrop-blur z-50"> -->
+		<nav class="fixed h-16 w-screen shadow-md flex items-center justify-center z-50">
+			<div class="flex w-full justify-between md:justify-around mx-auto">
+				<div class="flex items-center min-w-fit scale-[.65] md:scale-75">
+					<svg viewBox="0 0 1000 150">
+						<a href="#home">
+							<text y="50%" dy=".3em">
+								Portfolio
+							</text>
+						</a>
+					</svg>
+				</div>
+				<div class="nav min-w-fit hidden md:block">
+					<div class="relative flex items-center">
+						<a href="#home" id="Home"
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+							onclick="setActive('Home')"><span class="link text-black">Home</span></a>
+						<a href="#about" id="About"
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+							onclick="setActive('About')"><span class="link text-black">About</span></a>
+						<a href="#skills" id="Skills"
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+							onclick="setActive('Skills')"><span class="link text-black">Skills</span></a>
+						<a href="#work" id="Work"
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+							onclick="setActive('Work')"><span class="link text-black">Work</span></a>
+						<a href="#development" id="Development"
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+							onclick="setActive('Development')"><span class="link text-black">Development</span></a>
+						<a href="#education" id="Education"
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+							onclick="setActive('Education')"><span class="link text-black">Education</span></a>
+					</div>
+				</div>
+
+				<div class="mobileNav mx-auto min-w-fit flex items-center md:hidden">
+					<div class="bars relative h-fit flex flex-col items-center mt-1" onclick="onMenuClicked()">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+					<div class="mobileMenu fixed top-16 right-0 min-h-screen w-2/3">
+						<div class="flex flex-col pt-8 items-center min-h-screen">
+							<a href="#home" id="Home"
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+								onclick="setActive('Home')"><span class="link text-black">Home</span></a>
+							<a href="#about" id="About"
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+								onclick="setActive('About')"><span class="link text-black">About</span></a>
+							<a href="#skills" id="Skills"
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+								onclick="setActive('Skills')"><span class="link text-black">Skills</span></a>
+							<a href="#work" id="Work"
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+								onclick="setActive('Work')"><span class="link text-black">Work</span></a>
+							<a href="#development" id="Development"
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+								onclick="setActive('Development')"><span class="link text-black">Development</span></a>
+							<a href="#education" id="Education"
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
+								onclick="setActive('Education')"><span class="link text-black">Education</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section id="home">
+		<div class="relative min-h-screen w-full flex items-center justify-center">
+			<!-- <img src="assets/bg.png" class="absolute top-0 h-full w-full" alt=""> -->
+
+			<div id="particles-js" class="absolute top-0 left-0 h-full w-full z-0"></div>
+
+			<div class="w-full md:w-11/12 lg:w-2/3">
+				<div
+					class="w-full flex items-center justify-between max-[700px]:flex-col max-[700px]:min-h-screen max-[700px]:justify-evenly">
+					<!-- <div class="w-1/2 flex justify-center z-10">
+						<div class="">
+							<p class="text-5xl font-bold">Hi, I am</p>
+							<p class="text-[#0D6EFD] text-7xl font-bold mt-3">Jagrit Goyal</p>
+							<div class="text-[#002E71] text-4xl font-bold mt-4">
+								<p class="">Software Developer</p>
+								<p class="">Web Developer</p>
+							</div>
+							<div class="mt-10">
+								<a href="#about" class="aboutMeBtn"><span>About Me</span> <i
+										class="fa fa-arrow-down text-black ml-2"></i> </a>
+							</div>
+						</div>
+					</div>
+					<div class="w-1/2 flex justify-center">
+						<img src="assets/caricature.gif" class="z  -scale-x-100" alt="">
+					</div> -->
+
+
+					<div class="image z-30">
+						<img src="assets/caricature.gif" class="" alt=''>
+					</div>
+					<div class="title">
+						<div class="title-inner">
+							<p class="text-4xl lg:text-5xl font-bold">Hi, I am</p>
+							<div class="container">
+								<div class="animated-title">
+									<div class="text-top">
+										<span>Jagrit Goyal</span>
+									</div>
+								</div>
+							</div>
+							<div class="text-[#002E71] text-3xl lg:text-4xl font-bold mt-4">
+								<p class="">Software Developer</p>
+								<p class="">Web Developer</p>
+							</div>
+							<div class="mt-10" id="aboutBtn">
+								<a href="#about" class="aboutMeBtn">
+									<span>About Me</span>
+									<i class="fa fa-arrow-down text-black ml-2"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- <hr class="h-2 bg-blue-500"> -->
+
+	<section id="about">
+		<div class="smoother bg-white min-h-screen w-full pt-32 pb-20">
+			<p class="text-center font-bold text-4xl"><i class="fa-solid fa-user mr-5"></i>About <span
+					class="text-blue-600 underline underline-offset-8 decoration-black decoration-[6px]">Me</span></p>
+			<div class="flex w-full items-center justify-center mt-20">
+				<div class="w-2/3 flex justify-center items-start text-justify lg:space-x-20 max-[1024px]:flex-col">
+					<div
+						class="flex items-end justify-center relative bottom-10 w-fit scale-100 max-[1024px]:scale-[.80]">
+						<div class="skewed"></div>
+						<img src="assets/profile2.png" class="img w-[30rem] mx-auto max-[1024px]:w-[22rem] relative"
+							alt="Picture">
+					</div>
+					<div class="w-full mt-10 inline-block">
+						<div class="flex">
+							<p class="text-lg">Hey there! I'm <span class="text-[#0D6EFD] text-xl font-semibold">Jagrit
+									Goyal</span>, graduated in <span class="font-semibold">Masters of Computer
+									Applications(MCA)</span> passionate about technology, professional
+								development and
+								growth. Armed with a degree from <span class="font-semibold">JECRC University,
+									Jaipur</span>, I'm eager to dive into Software / Web development and embark
+								on my
+								new
+								journey. I bring fresh ideas, a hunger for learning, and the ability to learn
+								new
+								things,
+								master the realm of programming languages through hands-on experience and
+								academic
+								coursework. I unwind myself in exploring new things, playing games and spending
+								time
+								with my
+								friends and family. I'm excited to leverage my skills, grow professionally, and
+								contribute
+								meaningfully in Information Technology. Let's connect and explore opportunities
+								together!
+							</p>
+						</div>
+						<hr class="mt-8 h-1 bg-slate-400 w-1/3">
+						<span class="text-lg inline-block mt-8">Additionally, I've created a video resume to
+							give you a
+							more personalized insight into my personality, communication style, and passion for
+							development. You can watch it
+							<a href="https://youtu.be/DUAVIVH-YTE" target="_blank"
+								class=" rounded-full font-bold text-xl text-blue-500 hover:text-blue-700">here.
+								<!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
+								<span class="material-symbols-outlined text-blue-900 text-lg">open_in_new</span></a>
+						</span>
+						<br>
+						<span class="text-lg">You can find my detailed PDF resume
+							<a href="assets/Jagrit_Goyal.pdf" target="_blank"
+								class="inline-block mt-5 rounded-full font-bold text-xl text-blue-500 hover:text-blue-700">here.
+								<!-- <i class="fa-solid fa-arrow-up-right-from-square text-blue-900"></i> -->
+								<span class="material-symbols-outlined text-blue-900 text-lg">open_in_new</span></a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <hr class="h-2 bg-blue-500"> -->
+
+	<section id="skills">
+		<div class="smoother bg-gray-100 min-h-screen w-full pt-32 pb-20 px-5">
+			<p class="text-center font-bold text-4xl"><i class="fa-solid fa-laptop-code mr-5"></i>Skills & <span
+					class="text-blue-600 underline underline-offset-8 decoration-black decoration-[6px]">Proficiencies</span>
+			</p>
+			<div class="flex justify-center mt-10">
+				<div class="bg-blue-500 max-w-fit max-h-fit rounded-lg">
+					<div class="win-grid" id="skillsGrid">
+
+						<!-- Skills will be added here -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <hr class="h-2 bg-blue-500"> -->
+
+	<section id="work">
+		<div class="smoother bg-white min-h-screen w-full pt-32 pb-20">
+			<p class="text-center font-bold text-4xl"><i class="fa-solid fa-laptop-file mr-5"></i>Project <span
+					class="text-blue-600 underline underline-offset-8 decoration-black decoration-[6px]">Work</span></p>
+
+			<div class="flex items-center justify-center mt-10">
+
+				<div class="grid flex-wrap grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 w-3/4"
+					id="projectsGrid">
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- <hr class="h-2 bg-blue-500"> -->
+
+	<section id="development">
+		<div class="smoother bg-gray-100 min-h-screen w-full pt-32 pb-20">
+			<p class="text-center font-bold text-4xl"><i class="fa-solid fa-chart-line mr-5"></i>Professional
+				<span class="text-blue-600 underline underline-offset-8 decoration-black decoration-[6px]">Development</span>
+			</p>
+			<div class="flex items-center justify-center mt-14">
+				<div class="relative flex items-start justify-between w-4/5 space-x-10">
+					<div class="w-full sm:w-1/2">
+						<div class="border-b-2 mt-2">
+							<!-- <div class="flex items-center justify-between cursor-pointer px-4 py-6 hover:bg-gray-100" onmouseenter="accordian('d1')" onmouseleave="accordian('d1')"> -->
+							<div class="flex items-center justify-between cursor-pointer px-4 py-6 hover:bg-white" onclick="accordian('d1')">
+								<button class="text-2xl font-bold">TensaX Innovation Lab (Internship - 6 months)
+								</button>
+								<!-- <i class="fa fa-angle-down transition-all duration-500"></i> -->
+								<i class="fa-solid fa-angle-down text-xl transition-all duration-500"></i>
+							</div>
+							<div class="px-5 mt-2 max-h-0 bg-white overflow-hidden transition-all duration-500 ease-linear" id="d1">
+								<p class="text-xl font-semibold mt-2">Web Developer Intern</p>
+								<ul class="pl-5 text-justify mb-5">
+									<li class="before:content-['&mdash;'] before:font-bold">
+										&nbsp;&nbsp;Completed a
+										6-month internship at TensaX Innovation Lab, gaining practical
+										experience in web
+										development processes, teamwork, and project management.</li>
+									<li class="before:content-['&mdash;'] before:font-bold">
+										&nbsp;&nbsp;Contributed to
+										designing and development of "Health App", collaborating with team
+										members to
+										deliver high-quality application solutions.</li>
+									<li class="before:content-['&mdash;'] before:font-bold">
+										&nbsp;&nbsp;Implemented
+										front-end interfaces using HTML, CSS, and JavaScript, while also gaining
+										exposure to technologies such as Figma, Tailwind, Svelte, Firebase.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="border-b-2 mt-2">
+							<div class="flex items-center justify-between cursor-pointer px-4 py-6 hover:bg-white"
+								onclick="accordian('d2')">
+								<button class="text-2xl font-bold">Angular - The Complete Guide </button>
+								<!-- <span
+									class="material-symbols-outlined transition-all duration-200 ease-linear">expand_more</span> -->
+								<i class="fa-solid fa-angle-down text-xl transition-all duration-500"></i>
+							</div>
+							<div class="px-5 mt-2 max-h-0 bg-white overflow-hidden transition-all duration-500 ease-linear" id="d2">
+								<ul class="pl-2 text-justify mb-5">
+									<li class="before:content-['&mdash;'] before:font-bold">
+										&nbsp;&nbsp;Completed comprehensive online course covering Angular
+										development
+										principles, including components, directives, services, routing, and
+										more.
+										Proficient in building dynamic and interactive web applications using
+										Angular
+										framework.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="border-b-2 mt-2">
+							<div class="flex items-center justify-between cursor-pointer px-4 py-6 hover:bg-white"
+								onclick="accordian('d3')">
+								<button class="text-2xl font-bold">Java </button>
+								<!-- <span
+									class="material-symbols-outlined transition-all duration-200 ease-linear">expand_more</span> -->
+								<i class="fa-solid fa-angle-down text-xl transition-all duration-500"></i>
+							</div>
+							<div class="px-5 mt-2 max-h-0 bg-white overflow-hidden transition-all duration-500 ease-linear" id="d3">
+								<ul class="pl-2 text-justify mb-8">
+									<li class="before:content-['&mdash;'] before:font-bold">
+										&nbsp;&nbsp;Developed proficiency in Java programming language through
+										self-study
+										via YouTube tutorials and other coding platforms. Demonstrated in “Snake
+										Game”
+										ability to write clean, efficient code and solve problems using Java.
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="w-1/2 hidden sm:block">
+						<img src="assets/development.png" class="w-full" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <hr class="h-2 bg-blue-500"> -->
+
+	<section id="education">
+		<div class="smoother bg-white min-h-screen w-full pt-32 pb-20">
+			<p class="text-center font-bold text-4xl"><i class="fa-solid fa-graduation-cap mr-5"></i>Educational <span
+					class="text-blue-600 underline underline-offset-8 decoration-black decoration-[6px]">Qualifications</span>
+			</p>
+
+			<div class="w-full mt-20 flex justify-center">
+				<div class="w-11/12 lg:w-1/2 grid grid-rows-4">
+					<div class="flex justify-between space-x-5 border-b-2 py-6 px-4 hover:shadow-lg hover:bg-gray-100">
+						<div class="">
+							<p class="font-semibold text-2xl">Masters of Computer Applications in Data Science
+							</p>
+							<p class=" text-lg mt-2">JECRC University | Jaipur</p>
+							<p class=" text-lg mt-2">8.81 GPA</p>
+						</div>
+						<p class="font-semibold text-xl">2021 - 2023</p>
+					</div>
+					<div class="flex justify-between border-b-2 py-6 px-4 hover:shadow-lg hover:bg-gray-100">
+						<div class="">
+							<p class="font-semibold text-2xl">Bachelors of Computer Applications</p>
+							<p class=" text-lg mt-2">Lachoo Memorial College of Science and Technology | Jodhpur
+							</p>
+							<p class=" text-lg mt-2">78.6%</p>
+						</div>
+						<p class="font-semibold text-xl">2018 - 2021</p>
+					</div>
+					<div class="flex justify-between border-b-2 py-6 px-4 hover:shadow-lg hover:bg-gray-100">
+						<div class="">
+							<p class="font-semibold text-2xl">12th Commerce - Maths</p>
+							<p class=" text-lg mt-2">Our Lady Of Pillar Convent School | Jodhpur</p>
+							<p class=" text-lg mt-2">68.4%</p>
+						</div>
+						<p class="font-semibold text-xl">2017 - 2018</p>
+					</div>
+					<div class="flex justify-between border-b-2 py-6 px-4 hover:shadow-lg hover:bg-gray-100">
+						<div class="">
+							<p class="font-semibold text-2xl">10th</p>
+							<p class=" text-lg mt-2">Our Lady Of Pillar Convent School | Jodhpur</p>
+							<p class=" text-lg mt-2">8.4 CGPA</p>
+						</div>
+						<p class="font-semibold text-xl">2015 - 2016</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <hr class="h-2 bg-blue-500"> -->
+
+	<footer>
+		<div class="min-h-fit w-full bg-blue-600">
+			<div
+				class="py-10 px-10 mx-auto grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-4 w-[90%] xl:w-4/5 text-lg">
+				<div class="relative w-[80%] h-fit my-auto mx-auto">
+					<div
+						class=" flex justify-center overflow-hidden aspect-square bg-[#002E71] rounded-full border-4 border-gray-300 group transition-all duration-300 hover:scale-110">
+						<img src="assets/profile.png"
+							class="relative top-4 group-hover:scale-95 transition-all duration-300" alt="Picture">
+					</div>
+				</div>
+				<div class=" space-y-5 text-justify">
+					<p class="text-white text-3xl font-bold">Jagrit's Portfolio</p>
+					<p class="text-white">Thank you for exploring my portfolio! If you have any questions or
+						would like to discuss potential collaborations, don't hesitate to reach out.</p>
+					<p class="text-white">Let's connect! Feel free to reach out to me for
+						inquiries or opportunities. You can also find me on LinkedIn for professional
+						networking.</p>
+				</div>
+				<div class=" text-white">
+					<p class="text-white text-2xl font-semibold">Contact Info</p>
+					<div class="space-y-3 mt-6">
+						<p class="flex items-center"><span class="material-symbols-outlined text-xl mr-2">
+								call
+							</span>+91 9664068789</p>
+						<p class="flex items-center"><span class="material-symbols-outlined text-xl mr-2">
+								location_on
+							</span>Jodhpur, Rajasthan, India - 342008</p>
+						<p class="flex items-center hover:text-black hover:font-semibold"><a
+								href="mailto:jagritgoyal13@gmail.com"><span
+									class="material-symbols-outlined text-xl mr-2">
+									alternate_email
+								</span>jagritgoyal13@gmail.com</a></p>
+						<div class="text-2xl flex space-x-5 pt-5">
+							<a href="mailto:jagritgoyal13@gmail.com" target="_blank"><i
+									class="bi bi-envelope h-fit w-fit px-3 py-2 rounded-full font-bold text-[#c71610] bg-white transition duration-200 hover:outline hover:outline-2 hover:bg-transparent hover:text-white"></i></a>
+							<a href="https://www.linkedin.com/in/jagrit-goyal/" target="_blank"><i
+									class="bi bi-linkedin h-fit w-fit px-3 py-2 rounded-full text-[#0077B5] bg-white transition duration-200 hover:outline hover:outline-2 hover:text-white hover:bg-transparent"></i></a>
+							<a href="https://github.com/JagritGoyal" target="_blank"><i
+									class="bi bi-github h-fit w-fit px-3 py-2 rounded-full text-[#24292e] bg-white transition duration-200 hover:outline hover:outline-2 hover:bg-transparent hover:text-white"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<p class="text-white text-2xl font-semibold">Quick Links</p>
+					<div class="space-y-2 mt-5 text-white flex flex-col justify-center">
+						<a class="hover:text-black" href="#home"><i class="bi bi-caret-right-fill mr-2"></i>Home</a>
+						<a class="hover:text-black" href="#about"><i class="bi bi-caret-right-fill mr-2"></i>About</a>
+						<a class="hover:text-black" href="#skills"><i class="bi bi-caret-right-fill mr-2"></i>Skills</a>
+						<a class="hover:text-black" href="#work"><i class="bi bi-caret-right-fill mr-2"></i>Work</a>
+						<a class="hover:text-black" href="#development"><i
+								class="bi bi-caret-right-fill mr-2"></i>Development</a>
+						<a class="hover:text-black" href="#education"><i
+								class="bi bi-caret-right-fill mr-2"></i>Education</a>
+					</div>
+				</div>
+			</div>
+			<hr class="w-4/5 mx-auto">
+			<div class="text-center py-3">
+				<p class="text-gray-100 font-medium">© Jagrit Goyal - 2024 | All rights reserved</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- particles.js -->
+	<script src="assets/js/particles.min.js"></script>
+	<script src="assets/js/app.js"></script>
+
+
+	<script src="script.js">
+	</script>
+
+</body>
+
+</html>
