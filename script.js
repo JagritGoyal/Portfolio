@@ -268,7 +268,7 @@ body.addEventListener("mousemove", (e) => {
 				const bx = x - brect.left; //x position within the element.
 				const by = y - brect.top; //y position within the element.
 				if (!element.style.borderImage)
-					element.style.borderImage = `radial-gradient(${offset * 2}px ${offset * 2}px at ${bx}px ${by}px,rgba(0,0,0,1),rgba(0,0,0,0.5),transparent ) 9 / 4px / 0px stretch `;
+					element.style.borderImage = `radial-gradient(${offset * 2}px ${offset * 2}px at ${bx}px ${by}px,rgba(23,0,255,1),rgba(23,0,255,0.5),transparent ) 9 / 4px / 0px stretch `;
 				return [...acc, element];
 			}
 		}

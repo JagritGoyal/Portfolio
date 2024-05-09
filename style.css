@@ -227,6 +227,12 @@ header nav div .mobileNav .mobileMenu.clicked {
 	}
 }
 
+@media (max-width:640px) {
+	.animated-title>div {
+		font-size: 2.5rem;
+	}
+}
+
 .animated-title>div span {
 	display: block;
 }
@@ -277,7 +283,6 @@ header nav div .mobileNav .mobileMenu.clicked {
 	text-align: left;
 }
 
-
 @keyframes animateRight {
 	0% {
 		transform: translate(-100%, 0);
@@ -303,6 +308,12 @@ header nav div .mobileNav .mobileMenu.clicked {
 	#home .aboutMeBtn {
 		padding: 0.8rem 1.2rem;
 		font-size: 1.1rem;
+	}
+}
+@media (max-width:640px) {
+	#home .aboutMeBtn {
+		padding: 0.7rem 1rem;
+		font-size: 0.95rem;
 	}
 }
 
@@ -403,9 +414,10 @@ header nav div .mobileNav .mobileMenu.clicked {
 	height: 22rem;
 	width: 19rem;
 }
+
 @media (max-width: 450px) {
 	.skewed {
-		transform: skew(20deg) scale(0.8,0.8);
+		transform: skew(20deg) scale(0.8, 0.8);
 	}
 }
 
@@ -415,7 +427,6 @@ header nav div .mobileNav .mobileMenu.clicked {
 /* skills section starts */
 .win-grid {
 	border: 1px solid white;
-	/* letter-spacing: 2px; */
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	align-items: stretch;
@@ -427,12 +438,6 @@ header nav div .mobileNav .mobileMenu.clicked {
 @media (max-width: 1024px) {
 	.win-grid {
 		grid-template-columns: repeat(4, 1fr);
-	}
-}
-
-@media (max-width: 768px) {
-	.win-grid {
-		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
@@ -454,6 +459,18 @@ header nav div .mobileNav .mobileMenu.clicked {
 	transition: all;
 	transition-duration: 200ms;
 }
+
+@media (max-width: 768px) {
+	.win-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0.8rem;
+		padding: 1.5rem;
+	}
+	.win-btn {
+		font-size: medium;
+	}
+}
+
 
 /* skills section ends */
 
