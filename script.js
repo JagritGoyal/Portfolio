@@ -283,7 +283,7 @@ var projectsGrid = document.getElementById("projectsGrid");
 var projectHTML = "";
 projects.forEach(project => {
 	projectHTML += `
-		<div class="project max-w-80 h-96 mx-auto cursor-pointer overflow-hidden transition-all duration-300 group">
+		<div class="project max-w-96 h-96 cursor-pointer overflow-hidden transition-all duration-300 group">
 			<div class="h-2/3 relative overflow-hidden bg-black group-hover:bg-black">
 				<img src="${project.img}" class="block h-full mx-auto transition duration-500 group-hover:scale-125 group-hover:opacity-50" alt="">
 				<div class="absolute flex items-center justify-center h-1/2 w-full top-0 p-3 opacity-0 transition duration-300 translate-y-10 group-hover:opacity-100 group-hover:translate-y-5 group-hover:delay-200">
