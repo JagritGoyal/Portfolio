@@ -114,24 +114,6 @@ function onMenuClicked() {
 	menu.classList.toggle('clicked');
 }
 
-// function setActive(activeLink) {
-// 	var div = document.getElementById('active');
-// 	var parentDivX = div.parentElement.getBoundingClientRect().left;
-// 	var activeDivX;
-// 	var active = document.getElementsByClassName('navLink');
-// 	for (let i = 0; i < active.length; i++) {
-// 		if (active[i].id == activeLink) {
-// 			active[i].classList.add('text-white');
-// 			activeDivX = active[i].getBoundingClientRect().left;
-// 			div.style.left = (activeDivX - parentDivX) + 'px';
-// 			div.style.width = active[i].clientWidth + 'px';
-// 		}
-// 		else {
-// 			active[i].classList.replace('text-white', 'text-blue-600');
-// 		}
-// 	}
-// }
-
 function setActive(activeLink) {
 	var links = document.querySelectorAll('.navLink .link');
 	links.forEach(link => {
