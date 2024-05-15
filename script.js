@@ -1,116 +1,5 @@
-var skills = [
-	{
-		name: "C++",
-		icon: "assets/skills/c++.png"
-	},
-	{
-		name: "Java",
-		icon: "assets/skills/java.png"
-	},
-	{
-		name: "Data Structures",
-		icon: "assets/skills/dsa.png"
-	},
-	{
-		name: "MySQL",
-		icon: "assets/skills/sql.png"
-	},
-	{
-		name: "Python",
-		icon: "assets/skills/python.png"
-	},
-	{
-		name: "PHP",
-		icon: "assets/skills/php.png"
-	},
-	{
-		name: "Xampp",
-		icon: "assets/skills/xampp.png"
-	},
-	{
-		name: "Figma",
-		icon: "assets/skills/figma.png"
-	},
-	{
-		name: "HTML",
-		icon: "assets/skills/html.png"
-	},
-	{
-		name: "CSS",
-		icon: "assets/skills/css.png"
-	},
-	{
-		name: "JavaScript",
-		icon: "assets/skills/javascript.png"
-	},
-	{
-		name: "Angular",
-		icon: "assets/skills/angular.png"
-	},
-	{
-		name: "Svelte",
-		icon: "assets/skills/svelte.png"
-	},
-	{
-		name: "Tailwind",
-		icon: "assets/skills/tailwind.png"
-	},
-	{
-		name: "Bootstrap",
-		icon: "assets/skills/bootstrap.png"
-	},
-	{
-		name: "Firebase",
-		icon: "assets/skills/firebase.png"
-	},
-]
 
-var projects = [
-	{
-		img: "assets/projects/recipebook.png",
-		title: "Recipe Book Application",
-		desc: "Developed a recipe book web application using Angular, allowing users to browse, create, update, and delete recipes.",
-		tech: "Angular, TypeScript, HTML, CSS, Bootstrap",
-		link: "https://github.com/JagritGoyal/recipe-book.git"
-	},
-	{
-		img: "assets/projects/snake.png",
-		title: "Snake Game",
-		desc: "Developed a classic Snake game in Java, featuring responsive controls, and collision detection.",
-		tech: "Java",
-		link: "https://github.com/JagritGoyal/snake-game.git"
-	},
-	{
-		img: "assets/projects/2048.png",
-		title: "2048 Game",
-		desc: "Created a browser-based version of the popular 2048. Implemented game logic, user interface, and scoring system.",
-		tech: "HTML, CSS, JavaScript, Tailwind",
-		link: "https://github.com/JagritGoyal/2048-game.git"
-	},
-	{
-		img: "assets/projects/healthapp.png",
-		title: "Health App",
-		desc: "The Health App is a comprehensive digital tool designed to empower users in effectively managing their health measures and wellness data, providing personalized insights and warnings for informed decision-making.",
-		tech: "Figma, HTML, CSS, JavaScript, Svelte, Tailwind",
-		link: "https://github.com/JagritGoyal/health-app.git"
-	},
-	{
-		img: "assets/projects/hellofixer.png",
-		title: "Hello Fixer!",
-		desc: "Platform which finds and hires the appropriate person for their work and helps workers to find work.",
-		tech: "HTML, CSS, JavaScript, PHP, Xampp",
-		link: "https://github.com/JagritGoyal/hello-fixer.git"
-	},
-	{
-		img: "assets/projects/bank.png",
-		title: "Bank Management",
-		desc: "Project to record and handle transactions of a user’s bank account.",
-		tech: "C++",
-		link: "https://github.com/JagritGoyal/bank-management.git"
-	},
-]
-
-
+document.getElementById('mobileNav').addEventListener("click", onMenuClicked);
 function onMenuClicked() {
 	var bars = document.querySelectorAll('.mobileNav .bars .bar');
 	bars.forEach(bar => {
@@ -123,7 +12,7 @@ function onMenuClicked() {
 function setActive(activeLink) {
 	var links = document.querySelectorAll('.navLink .link');
 	links.forEach(link => {
-		if(link.innerHTML == activeLink) {
+		if (link.innerHTML == activeLink) {
 			link.classList.add('active');
 		} else {
 			link.classList.remove('active');
@@ -134,11 +23,11 @@ function setActive(activeLink) {
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('header nav div .nav div a');
 
-window.addEventListener('scroll', event1);
-window.addEventListener('load', event1);
+window.addEventListener('scroll', setActiveOnScroll);
+window.addEventListener('load', setActiveOnScroll);
 
 //function to set link active on scroll
-function event1() {
+function setActiveOnScroll() {
 	var current = "";
 
 	sections.forEach((section) => {
@@ -157,9 +46,9 @@ function event1() {
 
 
 // Smooth Scrolling
-window.addEventListener('scroll', event2);
-window.addEventListener('load', event2);
-function event2() {
+window.addEventListener('scroll', smoothScrolling);
+window.addEventListener('load', smoothScrolling);
+function smoothScrolling() {
 	var smoother = document.querySelectorAll('.smoother');
 	// console.log(smoother);
 	for (let i = 0; i < smoother.length; i++) {
@@ -180,20 +69,24 @@ function event2() {
 //cube
 window.addEventListener('load', () => {
 	var cubes = document.querySelectorAll('.cube');
-	
+
 	for (let i = 0; i < cubes.length; i++) {
 		var top = Math.floor(Math.random() * 100) + 1;
 		var left = Math.floor(Math.random() * 100) + 1;
 		var time = Math.floor(Math.random() * 1000) + 1;
 		console.log(time);
-		cubes[i].classList.add('left-['+left+'vw]');
-		cubes[i].classList.add('top-['+top+'vh]');
-		cubes[i].classList.add('delay-['+time+'ms]');
+		cubes[i].classList.add('left-[' + left + 'vw]');
+		cubes[i].classList.add('top-[' + top + 'vh]');
+		cubes[i].classList.add('delay-[' + time + 'ms]');
 	}
 })
 
 
 // skills start
+const response1 = await fetch('./assets/skills/skills.json')
+const skills = await response1.json();
+
+
 var skillsGrid = document.getElementById("skillsGrid");
 var skillHTML = "";
 skills.forEach((skill, i) => {
@@ -267,50 +160,35 @@ body.addEventListener("mousemove", (e) => {
 // skills end
 
 
+
+// projects start
+const response2 = await fetch('./assets/projects/projects.json')
+const projects = await response2.json();
+
 var projectsGrid = document.getElementById("projectsGrid");
 var projectHTML = "";
 projects.forEach(project => {
 	projectHTML += `
-		<div class="project relative max-w-96 max-h-80 overflow-hidden hover:overflow-visible cursor-pointer group">
-			<div class="bg-black group-hover:bg-black transition-all duration-300 pb-10 overflow-hidden">
-				<img src="${project.img}" class="h-64  mx-auto group-hover:scale-110 group-hover:opacity-50 transition-all duration-300" alt="">
-				<div class="absolute flex items-center justify-center h-1/2 w-full top-5 p-3 transition duration-300 delay-200 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
-					<div class="w-full relative top-2 text-center space-y-8">
-						<a href="${project.link}" target="_blank" class="relative text-white font-semibold border-2 px-4 py-2 rounded-md hover:bg-white hover:text-blue-500 hover:border-blue-500">View Code</a>
-						<p class="text-white text-left"><i class="font-semibold">Technology Used:</i> ${project.tech}</p>
-					</div>
+		<div class="relative">
+			<div class="project max-w-96 max-h-[21.75rem] overflow-hidden border-2 group transition-all duration-300">
+				<div class="relative bg-black">
+					<img src="${project.img}" class="h-72 mx-auto  group-hover:bg-black group-hover:opacity-65 transition-all duration-300" alt="">
 				</div>
-			</div>
-			<div class="project -translate-y-10 bg-white border-t-2 px-4 py-4 group-hover:space-y-2 h-fit group-hover:max-h-fit transition-all duration-300 group-hover:-translate-y-28">
-				<p class="projectHead text-2xl font-bold">${project.title}</p>
-				<div class=" max-h-0 group-hover:max-h-96 transition-all duration-500 ease-in-out">
-					<p class=" translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-200">${project.desc}</p>
+				<div class="p-3 border-t-2 translate-y-0 group-hover:-translate-y-3/4 bg-white transition-all duration-300">
+					<div class="absolute w-11/12 left-1/2 -top-3 -translate-x-1/2 -translate-y-full hidden group-hover:flex flex-col justify-center space-y-3	">
+						<a href="${project.link}" target="_blank" class="relative left-1/2 -translate-x-1/2 text-white w-fit font-semibold border-2 px-4 py-2 rounded-md hover:bg-white hover:text-blue-500 hover:border-blue-500">View Code</a>
+						<p class="text-white">Technologies Used: ${project.tech}</p>
+					</div>
+					<p class="font-bold text-2xl relative -top-1">${project.title}</p>
+					<p class="max-h-0 group-hover:max-h-96 opacity-0 mt-3 group-hover:opacity-100 transition-all duration-300">${project.desc}</p>
 				</div>
 			</div>
 		</div>
 	`
-	// projectHTML += `
-	// 	<div class="project max-w-96 h-96 cursor-pointer overflow-hidden transition-all duration-300 group">
-	// 		<div class="h-2/3 relative overflow-hidden bg-black group-hover:bg-black">
-	// 			<img src="${project.img}" class="block h-full mx-auto transition duration-500 group-hover:scale-125 group-hover:opacity-50" alt="">
-	// 			<div class="absolute flex items-center justify-center h-1/2 w-full top-0 p-3 opacity-0 transition duration-300 translate-y-10 group-hover:opacity-100 group-hover:translate-y-5 group-hover:delay-200">
-	// 				<div class="w-full relative top-5 text-center space-y-8">
-	// 					<a href="${project.link}" target="_blank" class="relative text-white font-semibold border-2 px-4 py-2 rounded-md hover:bg-white hover:text-blue-500 hover:border-blue-500">View Code</a>
-	// 					<p class="text-white text-left"><i class="font-semibold">Technology Used:</i> ${project.tech}</p>
-	// 				</div>
-	// 			</div>
-	// 		</div>
-	// 		<hr>
-	// 		<div class="h-1/3 bg-white relative transition duration-300 group-hover:-translate-y-20">
-	// 			<p class="font-bold text-xl py-3 px-5">${project.title}</p>
-	// 			<div class="absolute px-3 opacity-0 translate-y-10  transition duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:delay-200">
-	// 				${project.desc}
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// `
 });
 projectsGrid.innerHTML = projectHTML;
+// projects end
+
 
 function accordian(str) {
 	var div = document.getElementById(str);

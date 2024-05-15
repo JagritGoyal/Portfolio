@@ -1,0 +1,44 @@
+[
+	{
+		"img": "assets/projects/recipebook.png",
+		"title": "Recipe Book Application",
+		"desc": "Developed a recipe book web application using Angular, allowing users to browse, create, update, and delete recipes.",
+		"tech": "Angular, TypeScript, HTML, CSS, Bootstrap",
+		"link": "https://github.com/JagritGoyal/recipe-book.git"
+	},
+	{
+		"img": "assets/projects/snake.png",
+		"title": "Snake Game",
+		"desc": "Developed a classic Snake game in Java, featuring responsive controls, and collision detection.",
+		"tech": "Java",
+		"link": "https://github.com/JagritGoyal/snake-game.git"
+	},
+	{
+		"img": "assets/projects/2048.png",
+		"title": "2048 Game",
+		"desc": "Created a browser-based version of the popular 2048. Implemented game logic, user interface, and scoring system.",
+		"tech": "HTML, CSS, JavaScript, Tailwind",
+		"link": "https://github.com/JagritGoyal/2048-game.git"
+	},
+	{
+		"img": "assets/projects/healthapp.png",
+		"title": "Health App",
+		"desc": "The Health App is a comprehensive digital tool designed to empower users in effectively managing their health measures and wellness data, providing personalized insights and warnings for informed decision-making.",
+		"tech": "Figma, HTML, CSS, JavaScript, Svelte, Tailwind",
+		"link": "https://github.com/JagritGoyal/health-app.git"
+	},
+	{
+		"img": "assets/projects/hellofixer.png",
+		"title": "Hello Fixer!",
+		"desc": "Platform which finds and hires the appropriate person for their work and helps workers to find work.",
+		"tech": "HTML, CSS, JavaScript, PHP, Xampp",
+		"link": "https://github.com/JagritGoyal/hello-fixer.git"
+	},
+	{
+		"img": "assets/projects/bank.png",
+		"title": "Bank Management",
+		"desc": "Project to record and handle transactions of a user’s bank account.",
+		"tech": "C++",
+		"link": "https://github.com/JagritGoyal/bank-management.git"
+	}
+]

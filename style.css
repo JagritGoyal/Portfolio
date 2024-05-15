@@ -214,7 +214,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 
 @media (max-width: 610px) {
 	.title {
-		width: 90%;
+		width: 70%;
 	}
 
 	#typed {
@@ -249,8 +249,6 @@ header nav div .mobileNav .mobileMenu.clicked {
 .animated-title>div span {
 	display: block;
 }
-
-
 
 .animated-title>div.text-top {
 	font-family: "Sedan SC", serif;
@@ -475,7 +473,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 }
 
 .project:hover {
-	/* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); */
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 	scale: 102%;
 }
 
@@ -491,7 +489,6 @@ header nav div .mobileNav .mobileMenu.clicked {
 	font-weight: 400;
 	letter-spacing: 2px;
 }
-
 
 .footerHeading1 {
 	font-family: "Overlock SC", sans-serif;

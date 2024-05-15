@@ -1,0 +1,66 @@
+[
+	{
+		"name": "C++",
+		"icon": "assets/skills/c++.png"
+	},
+	{
+		"name": "Java",
+		"icon": "assets/skills/java.png"
+	},
+	{
+		"name": "Data Structures",
+		"icon": "assets/skills/dsa.png"
+	},
+	{
+		"name": "MySQL",
+		"icon": "assets/skills/sql.png"
+	},
+	{
+		"name": "Python",
+		"icon": "assets/skills/python.png"
+	},
+	{
+		"name": "PHP",
+		"icon": "assets/skills/php.png"
+	},
+	{
+		"name": "Xampp",
+		"icon": "assets/skills/xampp.png"
+	},
+	{
+		"name": "Figma",
+		"icon": "assets/skills/figma.png"
+	},
+	{
+		"name": "HTML",
+		"icon": "assets/skills/html.png"
+	},
+	{
+		"name": "CSS",
+		"icon": "assets/skills/css.png"
+	},
+	{
+		"name": "JavaScript",
+		"icon": "assets/skills/javascript.png"
+	},
+	{
+		"name": "Angular",
+		"icon": "assets/skills/angular.png"
+	},
+	{
+		"name": "Svelte",
+		"icon": "assets/skills/svelte.png"
+	},
+	{
+		"name": "Tailwind",
+		"icon": "assets/skills/tailwind.png"
+	},
+	{
+		"name": "Bootstrap",
+		"icon": "assets/skills/bootstrap.png"
+	},
+	{
+		"name": "Firebase",
+		"icon": "assets/skills/firebase.png"
+	}
+]

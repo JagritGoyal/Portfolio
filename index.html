@@ -31,30 +31,30 @@
 					</svg>
 				</div>
 				<div class="nav min-w-fit hidden md:block">
-					<div class="relative flex items-center">
+					<div class="relative flex items-center" id="desktopNav">
 						<a href="#home" id="Home"
-							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-							onclick="setActive('Home')"><span class="link text-black">Home</span></a>
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+								class="link text-black">Home</span></a>
 						<a href="#about" id="About"
-							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-							onclick="setActive('About')"><span class="link text-black">About</span></a>
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+								class="link text-black">About</span></a>
 						<a href="#skills" id="Skills"
-							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-							onclick="setActive('Skills')"><span class="link text-black">Skills</span></a>
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+								class="link text-black">Skills</span></a>
 						<a href="#work" id="Work"
-							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-							onclick="setActive('Work')"><span class="link text-black">Work</span></a>
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+								class="link text-black">Work</span></a>
 						<a href="#development" id="Development"
-							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-							onclick="setActive('Development')"><span class="link text-black">Development</span></a>
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+								class="link text-black">Development</span></a>
 						<a href="#education" id="Education"
-							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-							onclick="setActive('Education')"><span class="link text-black">Education</span></a>
+							class="navLink text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+								class="link text-black">Education</span></a>
 					</div>
 				</div>
 
 				<div class="mobileNav mx-auto min-w-fit flex items-center md:hidden">
-					<div class="bars relative h-fit flex flex-col items-center mt-1" onclick="onMenuClicked()">
+					<div class="bars relative h-fit flex flex-col items-center mt-1" id="mobileNav">
 						<div class="bar"></div>
 						<div class="bar"></div>
 						<div class="bar"></div>
@@ -62,23 +62,23 @@
 					<div class="mobileMenu fixed top-16 right-0 min-h-screen w-2/3">
 						<div class="flex flex-col pt-8 items-center min-h-screen">
 							<a href="#home" id="Home"
-								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-								onclick="setActive('Home')"><span class="link text-black">Home</span></a>
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+									class="link text-black">Home</span></a>
 							<a href="#about" id="About"
-								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-								onclick="setActive('About')"><span class="link text-black">About</span></a>
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+									class="link text-black">About</span></a>
 							<a href="#skills" id="Skills"
-								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-								onclick="setActive('Skills')"><span class="link text-black">Skills</span></a>
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+									class="link text-black">Skills</span></a>
 							<a href="#work" id="Work"
-								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-								onclick="setActive('Work')"><span class="link text-black">Work</span></a>
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+									class="link text-black">Work</span></a>
 							<a href="#development" id="Development"
-								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-								onclick="setActive('Development')"><span class="link text-black">Development</span></a>
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+									class="link text-black">Development</span></a>
 							<a href="#education" id="Education"
-								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"
-								onclick="setActive('Education')"><span class="link text-black">Education</span></a>
+								class="navLink text-lg text-blue-600 transition-all duration-300 font-medium px-6 py-2 rounded-full"><span
+									class="link text-black">Education</span></a>
 						</div>
 					</div>
 				</div>
@@ -143,27 +143,17 @@
 					</div>
 					<div class="w-full sm:mt-10 inline-block">
 						<div class="flex">
-							<p class="text-base sm:text-lg">Hey there! I'm <span
-									class="text-[#0D6EFD] text-lg sm:text-xl font-semibold">Jagrit
-									Goyal</span>, graduated in <span class="font-semibold">Masters of Computer
-									Applications(MCA)</span> passionate about technology, professional
-								development and
-								growth. Armed with a degree from <span class="font-semibold">JECRC University,
-									Jaipur</span>, I'm eager to dive into Software / Web development and embark
-								on my
-								new
-								journey. I bring fresh ideas, a hunger for learning, and the ability to learn
-								new
-								things,
-								master the realm of programming languages through hands-on experience and
-								academic
-								coursework. I unwind myself in exploring new things, playing games and spending
-								time
-								with my
-								friends and family. I'm excited to leverage my skills, grow professionally, and
-								contribute
-								meaningfully in Information Technology. Let's connect and explore opportunities
-								together!
+							<p class="text-base sm:text-lg">Hey there! I'm
+								<span class="text-[#0D6EFD] text-lg sm:text-xl font-semibold">Jagrit Goyal</span>,
+								graduated in <span class="font-semibold">Masters of Computer Applications(MCA)</span>
+								passionate about technology, professional development and growth. Armed with a degree
+								from <span class="font-semibold">JECRC University, Jaipur</span>, I'm eager to dive into
+								Software / Web development and embark on my new journey. I bring fresh ideas, a hunger
+								for learning, and the ability to learn new things, master the realm of programming
+								languages through hands-on experience and academic coursework. I unwind myself in
+								exploring new things, playing games and spending time with my friends and family. I'm
+								excited to leverage my skills, grow professionally, and contribute meaningfully in
+								Information Technology. Let's connect and explore opportunities together!
 							</p>
 						</div>
 						<hr class="mt-8 h-1 bg-slate-400 w-1/2">
@@ -179,7 +169,8 @@
 										class="material-symbols-outlined text-blue-900 text-base sm:text-lg">open_in_new</span></a>
 							</span>
 							<span class="text-base sm:text-lg block mt-5">You can find my detailed PDF resume
-								<a href="assets/Jagrit_Goyal.pdf" target="_blank"
+								<a href="https://drive.google.com/file/d/1VRl6VXFeFFiHF5tlyK8lo6kh-cxyVidD/view?usp=sharing"
+									target="_blank"
 									class="rounded-full font-semibold sm:font-bold text-lg sm:text-xl text-blue-500 hover:text-blue-700">here.
 									<!-- <i class="fa-solid fa-arrow-up-right-from-square text-blue-900"></i> -->
 									<span
@@ -221,14 +212,11 @@
 			</p>
 
 			<div class="flex items-center justify-center mt-10">
-
-				<div class="grid flex-wrap grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 w-3/4"
-					id="projectsGrid">
+				<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 md:gap-8 w-3/4" id="projectsGrid">
 
 					<!-- Projects will be shown here -->
 
 				</div>
-
 			</div>
 		</div>
 	</section>
@@ -245,10 +233,10 @@
 				<div class="relative flex items-start justify-between w-4/5 space-x-10">
 					<div class="w-full sm:w-1/2">
 						<div class="border-b-2 mt-2">
-							<!-- <div class="flex items-center justify-between cursor-pointer px-4 py-6 hover:bg-gray-100" onmouseenter="accordian('d1')" onmouseleave="accordian('d1')"> -->
 							<div class="flex items-center justify-between cursor-pointer px-4 py-6 hover:bg-white"
 								onclick="accordian('d1')">
-								<button class="developmentHead text-xl sm:text-2xl font-bold text-left">TensaX Innovation Lab
+								<button class="developmentHead text-xl sm:text-2xl font-bold text-left">TensaX
+									Innovation Lab
 									(Internship - 6
 									months)
 								</button>
@@ -278,7 +266,8 @@
 						<div class="border-b-2 mt-2">
 							<div class="flex items-center justify-between cursor-pointer px-4 py-6 hover:bg-white"
 								onclick="accordian('d2')">
-								<button class="developmentHead text-xl sm:text-2xl font-bold text-left">Angular - The Complete Guide
+								<button class="developmentHead text-xl sm:text-2xl font-bold text-left">Angular - The
+									Complete Guide
 								</button>
 								<i class="fa-solid fa-angle-down text-xl transition-all duration-500"></i>
 							</div>
@@ -462,8 +451,7 @@
 		});
 	</script>
 
-	<script src="script.js">
-	</script>
+	<script src="script.js" type="module"></script>
 
 </body>
 
