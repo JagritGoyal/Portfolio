@@ -35,6 +35,7 @@ svg text {
 	stroke: #000000;
 	font-weight: 700;
 	font-size: 180px;
+	letter-spacing: 15px;
 }
 
 @keyframes stroke {
