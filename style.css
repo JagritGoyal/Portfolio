@@ -214,7 +214,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 
 @media (max-width: 610px) {
 	.title {
-		width: 70%;
+		width: 80%;
 	}
 
 	#typed {
@@ -330,7 +330,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 
 #home .aboutMeBtn span {
 	position: relative;
-	left: 18px;
+	left: 15px;
 	transition: 200ms all ease-in-out;
 }
 
@@ -481,6 +481,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 	font-family: "Caveat", cursive;
 	font-size: 30px;
 }
+/* project section ends */
 
 .developmentHead {
 	/* font-family: "Poiret One", sans-serif; */

@@ -66,6 +66,8 @@ function smoothScrolling() {
 }
 
 
+// skills section start
+
 //cube
 window.addEventListener('load', () => {
 	var cubes = document.querySelectorAll('.cube');
@@ -81,11 +83,8 @@ window.addEventListener('load', () => {
 	}
 })
 
-
-// skills start
 const response1 = await fetch('./assets/skills/skills.json')
 const skills = await response1.json();
-
 
 var skillsGrid = document.getElementById("skillsGrid");
 var skillHTML = "";
@@ -157,11 +156,10 @@ body.addEventListener("mousemove", (e) => {
 	}, []);
 });
 
-// skills end
+// skills section end
 
 
-
-// projects start
+// projects section start
 const response2 = await fetch('./assets/projects/projects.json')
 const projects = await response2.json();
 
@@ -179,7 +177,7 @@ projects.forEach(project => {
 						<a href="${project.link}" target="_blank" class="relative left-1/2 -translate-x-1/2 text-white w-fit font-semibold border-2 px-4 py-2 rounded-md hover:bg-white hover:text-blue-500 hover:border-blue-500">View Code</a>
 						<p class="text-white">Technologies Used: ${project.tech}</p>
 					</div>
-					<p class="font-bold text-2xl relative -top-1">${project.title}</p>
+					<p class="font-bold text-xl md:text-2xl relative">${project.title}</p>
 					<p class="max-h-0 group-hover:max-h-96 opacity-0 mt-3 group-hover:opacity-100 transition-all duration-300">${project.desc}</p>
 				</div>
 			</div>
@@ -187,15 +185,23 @@ projects.forEach(project => {
 	`
 });
 projectsGrid.innerHTML = projectHTML;
-// projects end
+// projects section end
 
-
-function accordian(str) {
-	var div = document.getElementById(str);
+// development section start
+document.querySelectorAll('.developmentHead').forEach(element => {
+	if (element.nextElementSibling.id == 'd1')
+		element.addEventListener('click', accordian)
+	else if (element.nextElementSibling.id == 'd2')
+		element.addEventListener('click', accordian)
+	else if (element.nextElementSibling.id == 'd3')
+		element.addEventListener('click', accordian)
+})
+function accordian() {
+	var div = this.nextElementSibling;
 	var icon = div.previousElementSibling.lastElementChild;
 	var activeDiv = div.previousElementSibling;
-	// console.log(icon);
 	div.classList.toggle('max-h-[40rem]');
 	icon.classList.toggle('rotate-180');
 	activeDiv.classList.toggle('bg-white');
 }
+// development section end
