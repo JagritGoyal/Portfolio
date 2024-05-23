@@ -46,24 +46,37 @@ function setActiveOnScroll() {
 
 
 // Smooth Scrolling
-window.addEventListener('scroll', smoothScrolling);
-window.addEventListener('load', smoothScrolling);
-function smoothScrolling() {
-	var smoother = document.querySelectorAll('.smoother');
-	// console.log(smoother);
-	for (let i = 0; i < smoother.length; i++) {
-		var windowHeight = window.innerHeight;
-		var revealTop = smoother[i].getBoundingClientRect().top;
-		// console.log(revealTop);
-		var revealPoint = 150;
+// window.addEventListener('scroll', smoothScrolling);
+// window.addEventListener('load', smoothScrolling);
+// function smoothScrolling() {
+// 	var smoother = document.querySelectorAll('.smoother');
+// 	// console.log(smoother);
+// 	for (let i = 0; i < smoother.length; i++) {
+// 		var windowHeight = window.innerHeight;
+// 		var revealTop = smoother[i].getBoundingClientRect().top;
+// 		// console.log(revealTop);
+// 		var revealPoint = 150;
 
-		if (revealTop < (windowHeight - revealPoint)) {
-			smoother[i].classList.add('reveal');
-		} else {
-			smoother[i].classList.remove('reveal');
-		}
-	}
-}
+// 		if (revealTop < (windowHeight - revealPoint)) {
+// 			smoother[i].classList.add('reveal');
+// 		} else {
+// 			smoother[i].classList.remove('reveal');
+// 		}
+// 	}
+// }
+
+
+// Typed js
+var typed = new Typed('#typed', {
+	strings: ['Software Developer', 'Front End Developer', 'Web Developer'],
+	typeSpeed: 50,
+	backSpeed: 20,
+	startDelay: 3000,
+	loop: true,
+	onComplete: (self) => {
+		self.startDelay = 200
+	},
+});
 
 
 // skills section start
@@ -205,3 +218,32 @@ function accordian() {
 	activeDiv.classList.toggle('bg-white');
 }
 // development section end
+
+
+
+const scrollReveal = ScrollReveal({
+	origin: 'bottom',
+	distance: '150px',
+	duration: 1000,
+	reset: false
+});
+
+
+scrollReveal.reveal('#home', { delay: 200 });
+scrollReveal.reveal('#about .pageHeading', { delay: 200 });
+scrollReveal.reveal('#about .profile', { delay: 300 });
+scrollReveal.reveal('#about .aboutContent', { delay: 400 });
+
+scrollReveal.reveal('#skills .pageHeading', { delay: 200 });
+scrollReveal.reveal('#skills .skillsContent .skills', { delay: 300 });
+
+scrollReveal.reveal('#work .pageHeading', { interval: 200 });
+scrollReveal.reveal('#work .projectsContent .project', { interval: 200 });
+
+scrollReveal.reveal('#development .pageHeading', { delay: 200 });
+scrollReveal.reveal('#development .developmentContent', { delay: 300, interval: 300 });
+scrollReveal.reveal('#development .developmentImage', { delay: 400 });
+
+scrollReveal.reveal('#education .pageHeading', { delay: 200 });
+scrollReveal.reveal('#education .educationContent', { delay: 300, interval: 200 });
+scrollReveal.reveal('#footer .profile', { delay: 100 })
