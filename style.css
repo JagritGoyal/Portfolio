@@ -18,6 +18,21 @@ html {
 	padding: 0px;
 }
 
+
+/* content reveal on scroll */
+/* .smoother {
+	opacity: 0;
+	transform: translateY(150px);
+	transition: all 1s;
+}
+
+.smoother.reveal {
+	opacity: 1;
+	transform: translateY(0);
+} */
+
+/* content reveal on scroll */
+
 /* logo animation */
 .portfolio {
 	font-family: "Patua One", serif;
@@ -175,20 +190,6 @@ header nav div .mobileNav .mobileMenu.clicked {
 
 /* Hamburger menu ends */
 
-/* content reveal on scroll */
-.smoother {
-	opacity: 0;
-	transform: translateY(150px);
-	transition: all 1s;
-}
-
-.smoother.reveal {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-/* content reveal on scroll */
-
 /* Home section starts */
 .title {
 	display: flex;
@@ -300,7 +301,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 	}
 
 	100% {
-		transform: translate(0, 0);
+		transform: translate(1.5%, 0);
 	}
 }
 
@@ -482,6 +483,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 	font-family: "Caveat", cursive;
 	font-size: 30px;
 }
+
 /* project section ends */
 
 .developmentHead {
