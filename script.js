@@ -1,9 +1,18 @@
 
 document.getElementById('mobileNav').addEventListener("click", onMenuClicked);
+
+document.addEventListener('mouseup', (e) => {
+	var menu = document.querySelector('.mobileNav .mobileMenu');
+
+	if (((e.target.id !== 'mobileMenuContent') && (menu.classList.contains('clicked'))) && (!e.target.classList.contains('bar'))) {
+		onMenuClicked();
+	}
+})
+
 function onMenuClicked() {
 	var bars = document.querySelectorAll('.mobileNav .bars .bar');
 	bars.forEach(bar => {
-		bar.classList.toggle('clicked')
+		bar.classList.toggle('clicked');
 	});
 	var menu = document.querySelector('.mobileNav .mobileMenu');
 	menu.classList.toggle('clicked');
@@ -39,6 +48,7 @@ function setActiveOnScroll() {
 
 	navLinks.forEach(navLink => {
 		if (navLink.getAttribute('href').includes(current)) {
+
 			setActive(navLink.id);
 		}
 	});
