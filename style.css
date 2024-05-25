@@ -417,7 +417,91 @@ header nav div .mobileNav .mobileMenu.clicked {
 /* about me section ends */
 
 /* skills section starts */
-.win-grid {
+
+
+.skillsGrid {
+	gap: 6px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	align-items: stretch;
+	text-align: center;
+	background-color: rgb(59 130 246);
+	border-radius: 5px;
+	padding: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+	.skillsGrid {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media (max-width: 1024px) {
+	.skillsGrid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.skillsGrid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.grid-box {
+	position: relative;
+	width: 11.2rem;
+	height: 9.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* padding: 5rem 1rem; */
+	transition: all 200ms;
+}
+
+@media (max-width: 680px) {
+	.skillsGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.grid-box {
+		width: 9.8rem;
+		height: 8rem;
+	}
+}
+
+
+.grid-box::after {
+	content: "";
+	height: 100%;
+	inset: 0;
+	position: absolute;
+	width: 100%;
+	background: radial-gradient(140px circle at var(--mouse-x) var(--mouse-y),
+			/* rgb(55, 0, 184), */
+			rgb(255, 255, 255),
+			/* rgba(23, 0, 255, 1), rgba(23, 0, 255, 0.5), */
+			transparent);
+	z-index: 1;
+}
+
+.grid-item {
+	background-image: linear-gradient(to right, #cce4f7, #ebf5fa);
+	padding: 1rem 0;
+	inset: 4px;
+	position: absolute;
+	z-index: 2;
+	color: black;
+	text-align: center;
+}
+
+.grid-box:hover {
+	/* background-color: rgb(17, 0, 255); */
+	scale: 103%;
+}
+
+
+/* .win-grid {
 	border: 1px solid white;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
@@ -462,7 +546,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 	.win-btn {
 		font-size: medium;
 	}
-}
+} */
 
 /* skills section ends */
 

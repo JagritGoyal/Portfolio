@@ -90,21 +90,16 @@ var typed = new Typed('#typed', {
 
 
 // skills section start
+document.getElementById('skills').onmousemove = e => {
+	for (const date of document.getElementsByClassName("grid-box")) {
+		const rect = date.getBoundingClientRect(),
+			x = e.clientX - rect.left,
+			y = e.clientY - rect.top;
 
-//cube
-window.addEventListener('load', () => {
-	var cubes = document.querySelectorAll('.cube');
-
-	for (let i = 0; i < cubes.length; i++) {
-		var top = Math.floor(Math.random() * 100) + 1;
-		var left = Math.floor(Math.random() * 100) + 1;
-		var time = Math.floor(Math.random() * 1000) + 1;
-		console.log(time);
-		cubes[i].classList.add('left-[' + left + 'vw]');
-		cubes[i].classList.add('top-[' + top + 'vh]');
-		cubes[i].classList.add('delay-[' + time + 'ms]');
-	}
-})
+		date.style.setProperty("--mouse-x", `${x}px`);
+		date.style.setProperty("--mouse-y", `${y}px`);
+	};
+}
 
 const response1 = await fetch('./assets/skills/skills.json')
 const skills = await response1.json();
@@ -113,71 +108,23 @@ var skillsGrid = document.getElementById("skillsGrid");
 var skillHTML = "";
 skills.forEach((skill, i) => {
 	skillHTML += `
-		<div class="win-btn" id="${i}">
-			<img src="${skill.icon}" style="margin:0 auto 8px auto;" class="h-14 w-14 sm:h-20 sm:w-20 " alt="">
-			${skill.name}
+		<div class="grid-box">
+			<div class="grid-item">
+				<img src="${skill.icon}" style="margin:0 auto 8px auto;" class="h-14 w-14 sm:h-20 sm:w-20 " alt="">
+				<p class="text-base sm:text-xl font-semibold mt-2 ">${skill.name}</p>
+			</div>
 		</div>
 	`
+	
+	// skillHTML += `
+	// 	<div class="win-btn" id="${i}">
+	// 		<img src="${skill.icon}" style="margin:0 auto 8px auto;" class="h-14 w-14 sm:h-20 sm:w-20 " alt="">
+	// 		${skill.name}
+	// 	</div>
+	// `
 });
 skillsGrid.innerHTML = skillHTML;
 
-/**
- * You can find an explanation for this code here - https://dev.to/jashgopani
- */
-const offset = 100;
-const angles = []; //in deg
-for (let i = 0; i <= 360; i += 45) {
-	angles.push((i * Math.PI) / 180);
-}
-let nearBy = [];
-
-function clearNearBy() {
-	nearBy.splice(0, nearBy.length).forEach((e) => (e.style.borderImage = null));
-}
-
-/*Effect #1 explanation - bit.ly/win10-button-effect*/
-document.querySelectorAll(".win-btn").forEach((b) => {
-	// console.log(b);
-	b.onmouseleave = (e) => {
-		// e.target.style.background = "transparent";
-		e.target.style.borderImage = null;
-		e.target.border = "1px solid transparent";
-	};
-
-	b.onmouseenter = (e) => {
-		clearNearBy();
-	};
-});
-
-const body = document.querySelector(".win-grid");
-
-body.addEventListener("mousemove", (e) => {
-	const x = e.x; //x position within the element.
-	const y = e.y; //y position within the element.
-
-	clearNearBy();
-	nearBy = angles.reduce((acc, rad, i, arr) => {
-		const cx = Math.floor(x + Math.cos(rad) * offset);
-		const cy = Math.floor(y + Math.sin(rad) * offset);
-		const element = document.elementFromPoint(cx, cy);
-
-		if (element !== null) {
-			// console.log("cursor at ", x, y, "element at ", cx, cy, element);
-			if (
-				element.className === "win-btn" &&
-				acc.findIndex((ae) => ae.id === element.id) < 0
-			) {
-				const brect = element.getBoundingClientRect();
-				const bx = x - brect.left; //x position within the element.
-				const by = y - brect.top; //y position within the element.
-				if (!element.style.borderImage)
-					element.style.borderImage = `radial-gradient(${offset * 2}px ${offset * 2}px at ${bx}px ${by}px,rgba(23,0,255,1),rgba(23,0,255,0.5),transparent ) 9 / 4px / 0px stretch `;
-				return [...acc, element];
-			}
-		}
-		return acc;
-	}, []);
-});
 
 // skills section end
 
