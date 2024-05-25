@@ -110,8 +110,8 @@ skills.forEach((skill, i) => {
 	skillHTML += `
 		<div class="grid-box">
 			<div class="grid-item">
-				<img src="${skill.icon}" style="margin:0 auto 8px auto;" class="h-14 w-14 sm:h-20 sm:w-20 " alt="">
-				<p class="text-base sm:text-xl font-semibold mt-2 ">${skill.name}</p>
+				<img src="${skill.icon}" alt="">
+				<p>${skill.name}</p>
 			</div>
 		</div>
 	`
@@ -147,7 +147,7 @@ projects.forEach(project => {
 						<a href="${project.link}" target="_blank" class="relative left-1/2 -translate-x-1/2 text-white w-fit font-semibold border-2 px-4 py-2 rounded-md hover:bg-white hover:text-blue-500 hover:border-blue-500">View Code</a>
 						<p class="text-white">Technologies Used: ${project.tech}</p>
 					</div>
-					<p class="font-bold text-xl md:text-2xl relative">${project.title}</p>
+					<p class="font-bold text-lg md:text-xl relative">${project.title}</p>
 					<p class="max-h-0 group-hover:max-h-96 opacity-0 mt-3 group-hover:opacity-100 transition-all duration-300">${project.desc}</p>
 				</div>
 			</div>
