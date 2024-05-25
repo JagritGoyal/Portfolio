@@ -479,7 +479,7 @@ header nav div .mobileNav .mobileMenu.clicked {
 	width: 100%;
 	background: radial-gradient(140px circle at var(--mouse-x) var(--mouse-y),
 			/* rgb(55, 0, 184), */
-			rgb(255, 255, 255),
+			rgb(0, 0, 0),
 			/* rgba(23, 0, 255, 1), rgba(23, 0, 255, 0.5), */
 			transparent);
 	z-index: 1;
